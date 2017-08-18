@@ -1,6 +1,6 @@
 ﻿namespace C_Sharp_Tool
 {
-	partial class Form1
+	partial class formMmaakpe
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -28,12 +28,33 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Text = "Form1";
+            this.components = new System.ComponentModel.Container();
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.main_Menu1 = new C_Sharp_Tool.Main_Menu();
+            this.SuspendLayout();
+            // 
+            // main_Menu1
+            // 
+            this.main_Menu1.Location = new System.Drawing.Point(-8, -30);
+            this.main_Menu1.Name = "main_Menu1";
+            this.main_Menu1.Size = new System.Drawing.Size(1560, 830);
+            this.main_Menu1.TabIndex = 0;
+            // 
+            // formMmaakpe
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1544, 792);
+            this.Controls.Add(this.main_Menu1);
+            this.Name = "formMmaakpe";
+            this.Text = "Form1";
+            this.ResumeLayout(false);
+
 		}
 
-		#endregion
-	}
+        #endregion
+        private System.IO.Ports.SerialPort serialPort1;
+        private Main_Menu main_Menu1;
+    }
 }
 

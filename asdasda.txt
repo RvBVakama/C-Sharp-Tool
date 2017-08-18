@@ -1,0 +1,4 @@
+https://gamedevelopment.tutsplus.com/articles/gamedev-glossary-what-is-blitting--gamedev-2247
+https://aieeduau-my.sharepoint.com/personal/alexm_aie_edu_au/_layouts/15/WopiFrame.aspx?guestaccesstoken=T1ZCdPRc9FmjC2StGBhJ%2bfTUMQxOuqUzsyeSiWvl2EQ%3d&docid=0423406a42f494520896804c2d5e943d3&action=view&wdSlideId=267&wdModeSwitchTime=1502848676329
+https://stackoverflow.com/questions/5923767/simple-state-machine-example-in-c
+https://msdn.microsoft.com/en-us/library/aa302342.aspx

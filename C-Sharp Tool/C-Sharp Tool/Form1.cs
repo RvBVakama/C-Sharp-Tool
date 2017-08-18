@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace C_Sharp_Tool
 {
-	public partial class Form1 : Form
+	public partial class formMmaakpe : Form
 	{
-		public Form1()
+		public formMmaakpe()
 		{
 			InitializeComponent();
 		}
-	}
+    }
 }
