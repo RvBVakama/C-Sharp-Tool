@@ -16,5 +16,15 @@ namespace C_Sharp_Tool
 		{
 			InitializeComponent();
 		}
+
+        private void main_Menu1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void formMmaakpe_Load(object sender, EventArgs e)
+        {
+            ucMapCreation.Hide();
+        }
     }
 }

@@ -19,10 +19,9 @@ namespace C_Sharp_Tool
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            lblTitle.Hide();
-            btnNew.Hide();
-            btnLoad.Hide();
-            btnExit.Hide();
+            // is, 'this', needed?
+            this.Hide();
+            ucMapCreation.Show();
         }
 
         private void btnLoad_Click(object sender, EventArgs e)

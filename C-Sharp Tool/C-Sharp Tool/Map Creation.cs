@@ -21,5 +21,10 @@ namespace C_Sharp_Tool
         {
 
         }
+
+        private void Map_Creation_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
