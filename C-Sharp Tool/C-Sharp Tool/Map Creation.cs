@@ -26,5 +26,20 @@ namespace C_Sharp_Tool
         {
 
         }
+
+        private void toolStripDropDownButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripDropDownButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

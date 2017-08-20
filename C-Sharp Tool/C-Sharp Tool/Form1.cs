@@ -24,7 +24,7 @@ namespace C_Sharp_Tool
 
         private void formMmaakpe_Load(object sender, EventArgs e)
         {
-            ucMapCreation.Hide();
+            //ucMapCreation.Hide();
         }
     }
 }

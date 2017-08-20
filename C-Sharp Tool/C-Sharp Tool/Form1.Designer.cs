@@ -30,9 +30,16 @@
 		{
             this.components = new System.ComponentModel.Container();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
-            this.ucMainMenu = new C_Sharp_Tool.Main_Menu();
             this.ucMapCreation = new C_Sharp_Tool.Map_Creation();
+            this.ucMainMenu = new C_Sharp_Tool.Main_Menu();
             this.SuspendLayout();
+            // 
+            // ucMapCreation
+            // 
+            this.ucMapCreation.Location = new System.Drawing.Point(-8, 2);
+            this.ucMapCreation.Name = "ucMapCreation";
+            this.ucMapCreation.Size = new System.Drawing.Size(1560, 830);
+            this.ucMapCreation.TabIndex = 1;
             // 
             // ucMainMenu
             // 
@@ -41,13 +48,6 @@
             this.ucMainMenu.Size = new System.Drawing.Size(1560, 830);
             this.ucMainMenu.TabIndex = 0;
             this.ucMainMenu.Load += new System.EventHandler(this.main_Menu1_Load);
-            // 
-            // ucMapCreation
-            // 
-            this.ucMapCreation.Location = new System.Drawing.Point(-8, 2);
-            this.ucMapCreation.Name = "ucMapCreation";
-            this.ucMapCreation.Size = new System.Drawing.Size(1560, 830);
-            this.ucMapCreation.TabIndex = 1;
             // 
             // formMmaakpe
             // 
