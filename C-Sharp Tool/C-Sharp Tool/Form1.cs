@@ -15,16 +15,13 @@ namespace C_Sharp_Tool
 		public formMmaakpe()
 		{
 			InitializeComponent();
+
+			ucMainMenu.tetset(ucMapCreation.tetget);
 		}
-
-        private void main_Menu1_Load(object sender, EventArgs e)
-        {
-
-        }
-
+		
         private void formMmaakpe_Load(object sender, EventArgs e)
         {
-            //ucMapCreation.Hide();
+            ucMapCreation.Hide();
         }
-    }
+	}
 }

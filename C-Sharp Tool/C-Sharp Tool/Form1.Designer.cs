@@ -28,38 +28,37 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            this.components = new System.ComponentModel.Container();
-            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
-            this.ucMapCreation = new C_Sharp_Tool.Map_Creation();
-            this.ucMainMenu = new C_Sharp_Tool.Main_Menu();
-            this.SuspendLayout();
-            // 
-            // ucMapCreation
-            // 
-            this.ucMapCreation.Location = new System.Drawing.Point(-8, 2);
-            this.ucMapCreation.Name = "ucMapCreation";
-            this.ucMapCreation.Size = new System.Drawing.Size(1560, 830);
-            this.ucMapCreation.TabIndex = 1;
-            // 
-            // ucMainMenu
-            // 
-            this.ucMainMenu.Location = new System.Drawing.Point(-8, -30);
-            this.ucMainMenu.Name = "ucMainMenu";
-            this.ucMainMenu.Size = new System.Drawing.Size(1560, 830);
-            this.ucMainMenu.TabIndex = 0;
-            this.ucMainMenu.Load += new System.EventHandler(this.main_Menu1_Load);
-            // 
-            // formMmaakpe
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1544, 792);
-            this.Controls.Add(this.ucMainMenu);
-            this.Controls.Add(this.ucMapCreation);
-            this.Name = "formMmaakpe";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.formMmaakpe_Load);
-            this.ResumeLayout(false);
+			this.components = new System.ComponentModel.Container();
+			this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+			this.ucMapCreation = new C_Sharp_Tool.Map_Creation();
+			this.ucMainMenu = new C_Sharp_Tool.Main_Menu();
+			this.SuspendLayout();
+			// 
+			// ucMapCreation
+			// 
+			this.ucMapCreation.Location = new System.Drawing.Point(-8, 2);
+			this.ucMapCreation.Name = "ucMapCreation";
+			this.ucMapCreation.Size = new System.Drawing.Size(1560, 830);
+			this.ucMapCreation.TabIndex = 1;
+			// 
+			// ucMainMenu
+			// 
+			this.ucMainMenu.Location = new System.Drawing.Point(-8, -30);
+			this.ucMainMenu.Name = "ucMainMenu";
+			this.ucMainMenu.Size = new System.Drawing.Size(1560, 830);
+			this.ucMainMenu.TabIndex = 0;
+			// 
+			// formMmaakpe
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ClientSize = new System.Drawing.Size(1544, 792);
+			this.Controls.Add(this.ucMainMenu);
+			this.Controls.Add(this.ucMapCreation);
+			this.Name = "formMmaakpe";
+			this.Text = "Form1";
+			this.Load += new System.EventHandler(this.formMmaakpe_Load);
+			this.ResumeLayout(false);
 
 		}
 

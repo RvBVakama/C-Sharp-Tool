@@ -12,19 +12,27 @@ namespace C_Sharp_Tool
 {
     public partial class Map_Creation : UserControl
     {
-        public Map_Creation()
+		public Map_Creation()
         {
             InitializeComponent();
         }
 
-        private void mapToolStripMenuItem_Click(object sender, EventArgs e)
+		public void tetget(object sender, EventArgs e)
+		{
+			Show();
+		}
+
+		private void mapToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
         private void Map_Creation_Load(object sender, EventArgs e)
         {
-
+			pbItem1.BackgroundImage = Properties.Resources.Spikes;
+			pbItem2.BackgroundImage = Properties.Resources.Wall;
+			pbItem3.BackgroundImage = Properties.Resources.Floor;
+			pbItem4.BackgroundImage = Properties.Resources.Move_AB;
         }
 
         private void toolStripDropDownButton1_Click(object sender, EventArgs e)
@@ -36,10 +44,10 @@ namespace C_Sharp_Tool
         {
 
         }
+		
+		private void tabPage1_Click(object sender, EventArgs e)
+		{
 
-        private void exirToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-    }
+		}
+	}
 }

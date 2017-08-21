@@ -12,16 +12,25 @@ namespace C_Sharp_Tool
 {
     public partial class Main_Menu : UserControl
     {
-        public Main_Menu()
+
+		public delegate void ButtonEvent(object sender, EventArgs e);
+
+		public Main_Menu()
         {
             InitializeComponent();
         }
 
+		public void tetset(ButtonEvent dd)
+		{
+			btnNew.Click += new EventHandler(dd);
+		}
+
         private void btnNew_Click(object sender, EventArgs e)
         {
-            // is, 'this', needed?
-            this.Hide();
-        }
+            Hide();
+			//mapcreatoin.Show();
+			//Parent.ShowScreen()
+		}
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
@@ -37,5 +46,10 @@ namespace C_Sharp_Tool
         {
 
         }
-    }
+
+		private void Main_Menu_Load(object sender, EventArgs e)
+		{
+
+		}
+	}
 }
