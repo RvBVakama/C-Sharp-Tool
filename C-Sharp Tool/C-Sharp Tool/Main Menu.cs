@@ -12,8 +12,9 @@ namespace C_Sharp_Tool
 {
     public partial class Main_Menu : UserControl
     {
-
 		public delegate void ButtonEvent(object sender, EventArgs e);
+
+		public Map_Size MapSize = new Map_Size();
 
 		public Main_Menu()
         {
@@ -24,12 +25,11 @@ namespace C_Sharp_Tool
 		{
 			btnNew.Click += new EventHandler(dd);
 		}
-
+		
         private void btnNew_Click(object sender, EventArgs e)
         {
-            Hide();
-			//mapcreatoin.Show();
-			//Parent.ShowScreen()
+			Hide();
+			MapSize.Show();
 		}
 
         private void btnLoad_Click(object sender, EventArgs e)

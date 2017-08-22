@@ -32,6 +32,7 @@
 			this.btnNew = new System.Windows.Forms.Button();
 			this.btnLoad = new System.Windows.Forms.Button();
 			this.btnExit = new System.Windows.Forms.Button();
+			this.menuBar1 = new C_Sharp_Tool.MenuBar();
 			this.SuspendLayout();
 			// 
 			// lblTitle
@@ -77,10 +78,18 @@
 			this.btnExit.UseVisualStyleBackColor = true;
 			this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
 			// 
+			// menuBar1
+			// 
+			this.menuBar1.Location = new System.Drawing.Point(-1, 29);
+			this.menuBar1.Name = "menuBar1";
+			this.menuBar1.Size = new System.Drawing.Size(1560, 25);
+			this.menuBar1.TabIndex = 105;
+			// 
 			// Main_Menu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.menuBar1);
 			this.Controls.Add(this.btnExit);
 			this.Controls.Add(this.lblTitle);
 			this.Controls.Add(this.btnLoad);
@@ -99,5 +108,6 @@
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnExit;
-    }
+		private MenuBar menuBar1;
+	}
 }

@@ -65,11 +65,17 @@
     <Compile Include="Map Creation.Designer.cs">
       <DependentUpon>Map Creation.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuBar.cs">
+    <Compile Include="Map Size.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Map Size.Designer.cs">
+      <DependentUpon>Map Size.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Bar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MenuBar.Designer.cs">
-      <DependentUpon>MenuBar.cs</DependentUpon>
+    <Compile Include="Menu Bar.Designer.cs">
+      <DependentUpon>Menu Bar.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,8 +88,11 @@
     <EmbeddedResource Include="Map Creation.resx">
       <DependentUpon>Map Creation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuBar.resx">
-      <DependentUpon>MenuBar.cs</DependentUpon>
+    <EmbeddedResource Include="Map Size.resx">
+      <DependentUpon>Map Size.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Bar.resx">
+      <DependentUpon>Menu Bar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

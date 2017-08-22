@@ -23,10 +23,8 @@ namespace C_Sharp_Tool
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
-            open.InitialDirectory = @"C:\Users\s171761\Desktop\New folder";
-			open.Filter = "Text files|*.txt|All files (*.*)|*.*";
-            open.DefaultExt = "txt";
-            if (open.ShowDialog() == DialogResult.OK)
+
+            if(open.ShowDialog() == DialogResult.OK)
             {
 				Bitmap image = (Bitmap)Image.FromFile(open.FileName);
 				pbImg.Image = (Bitmap)Image.FromFile(open.FileName);
@@ -45,8 +43,9 @@ namespace C_Sharp_Tool
         {
 			SaveFileDialog save = new SaveFileDialog();
 			save.InitialDirectory = @"C:\Users\s171761\Desktop\New folder";
-			save.Filter = "Text files|*.txt|All files (*.*)|*.*";
+			save.Filter = "Text Files|*.txt";
 			save.DefaultExt = "txt";
+
 			if(save.ShowDialog() == DialogResult.OK)
 			{
 				//save a text file

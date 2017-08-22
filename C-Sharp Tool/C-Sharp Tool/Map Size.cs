@@ -10,20 +10,16 @@ using System.Windows.Forms;
 
 namespace C_Sharp_Tool
 {
-	public partial class formMmaakpe : Form
+	public partial class Map_Size : Form
 	{
-		public formMmaakpe()
+		public Map_Size()
 		{
 			InitializeComponent();
-
-			ucMainMenu.tetset(ucMapCreation.tetget);
-
-			//MapSize.Hide();
 		}
-				
-        private void formMmaakpe_Load(object sender, EventArgs e)
-        {
-            ucMapCreation.Hide();
-        }
+
+		private void btnSet_Click(object sender, EventArgs e)
+		{
+			Close();
+		}
 	}
 }

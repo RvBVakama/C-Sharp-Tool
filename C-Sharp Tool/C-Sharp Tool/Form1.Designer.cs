@@ -55,6 +55,7 @@
 			this.ClientSize = new System.Drawing.Size(1544, 792);
 			this.Controls.Add(this.ucMainMenu);
 			this.Controls.Add(this.ucMapCreation);
+			this.IsMdiContainer = true;
 			this.Name = "formMmaakpe";
 			this.Text = "Form1";
 			this.Load += new System.EventHandler(this.formMmaakpe_Load);

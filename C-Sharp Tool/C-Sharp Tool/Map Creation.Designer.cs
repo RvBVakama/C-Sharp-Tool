@@ -129,7 +129,6 @@
 			this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
 			this.toolStripDropDownButton3.Size = new System.Drawing.Size(38, 22);
 			this.toolStripDropDownButton3.Text = "File";
-			this.toolStripDropDownButton3.Click += new System.EventHandler(this.toolStripDropDownButton3_Click);
 			// 
 			// openToolStripMenuItem1
 			// 
@@ -216,7 +215,6 @@
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "tabPage1";
 			this.tabPage1.UseVisualStyleBackColor = true;
-			this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
 			// 
 			// pictureBox20
 			// 
@@ -515,13 +513,13 @@
 			// 
 			// pbGrid
 			// 
-			this.pbGrid.Image = global::C_Sharp_Tool.Properties.Resources.Base_grid_14x14;
 			this.pbGrid.Location = new System.Drawing.Point(371, 34);
 			this.pbGrid.Name = "pbGrid";
-			this.pbGrid.Size = new System.Drawing.Size(701, 701);
+			this.pbGrid.Size = new System.Drawing.Size(700, 700);
 			this.pbGrid.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
 			this.pbGrid.TabIndex = 2;
 			this.pbGrid.TabStop = false;
+			this.pbGrid.Paint += new System.Windows.Forms.PaintEventHandler(this.pbGridPaint);
 			// 
 			// tsFile
 			// 
@@ -610,11 +608,10 @@
 			this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
 			this.toolStripDropDownButton1.Size = new System.Drawing.Size(45, 22);
 			this.toolStripDropDownButton1.Text = "Help";
-			this.toolStripDropDownButton1.Click += new System.EventHandler(this.toolStripDropDownButton1_Click);
 			// 
 			// menuBar2
 			// 
-			this.menuBar2.Location = new System.Drawing.Point(0, 0);
+			this.menuBar2.Location = new System.Drawing.Point(-1, -3);
 			this.menuBar2.Name = "menuBar2";
 			this.menuBar2.Size = new System.Drawing.Size(1560, 25);
 			this.menuBar2.TabIndex = 5;
@@ -623,9 +620,9 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.menuBar2);
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.pBreakdown);
-			this.Controls.Add(this.menuBar2);
 			this.Controls.Add(this.lblItemList);
 			this.Controls.Add(this.tcItemList);
 			this.Controls.Add(this.pbGrid);
