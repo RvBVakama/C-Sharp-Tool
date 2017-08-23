@@ -56,7 +56,7 @@ namespace C_Sharp_Tool
 
 		private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+			Global.uExit();
         }
     }
 }

@@ -17,7 +17,7 @@ namespace C_Sharp_Tool
             InitializeComponent();
         }
 
-		public void tetget(object sender, EventArgs e)
+		public void btnNewGet(object sender, EventArgs e)
 		{
 			Show();
 		}
@@ -39,26 +39,42 @@ namespace C_Sharp_Tool
 		{
 			Graphics g = e.Graphics;
 
-			int numOfCells = 50;
-			int cellSize = 0;
+			int nBoxSize = 700;
 
-			if (numOfCells == 70)
-				cellSize = 10;
+			int nNumOfCells = 0;
+			int nCellSize = 0;
 
-			if (numOfCells == 50)
-				cellSize = 14;
+			nNumOfCells = 70;
 
+			nCellSize = nBoxSize / nNumOfCells; 
+			
 			Pen p = new Pen(Color.LightGray);
 
-			for (int y = 0; y < numOfCells; ++y)
+			for (int y = 0; y < nNumOfCells; ++y)
 			{
-				g.DrawLine(p, 0, y * cellSize, numOfCells * cellSize, y * cellSize);
+				g.DrawLine(p, 0, y * nCellSize, nNumOfCells * nCellSize, y * nCellSize);
 			}
 
-			for (int x = 0; x < numOfCells; ++x)
+			for (int x = 0; x < nNumOfCells; ++x)
 			{
-				g.DrawLine(p, x * cellSize, 0, x * cellSize, numOfCells * cellSize);
+				g.DrawLine(p, x * nCellSize, 0, x * nCellSize, nNumOfCells * nCellSize);
 			}
+
+
+			// Create image.
+			//Image newImage = Image.FromFile("Move");
+			
+
+			// Create rectangle for displaying image.
+			Rectangle destRect = new Rectangle(100,0,64,64);
+
+			// Create rectangle for source image.
+			Rectangle srcRect = new Rectangle(0, 0, 64, 64);
+			GraphicsUnit units = GraphicsUnit.Pixel;
+
+			// Draw image to screen.
+			e.Graphics.DrawImage(Properties.Resources.Spikes, destRect, srcRect, units);
+
 		}
 	}
 }

@@ -16,9 +16,7 @@ namespace C_Sharp_Tool
 		{
 			InitializeComponent();
 
-			ucMainMenu.tetset(ucMapCreation.tetget);
-
-			//MapSize.Hide();
+			ucMainMenu.btnNewSet(ucMapCreation.btnNewGet);
 		}
 				
         private void formMmaakpe_Load(object sender, EventArgs e)

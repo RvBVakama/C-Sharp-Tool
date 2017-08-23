@@ -515,7 +515,7 @@
 			// 
 			this.pbGrid.Location = new System.Drawing.Point(371, 34);
 			this.pbGrid.Name = "pbGrid";
-			this.pbGrid.Size = new System.Drawing.Size(700, 700);
+			this.pbGrid.Size = new System.Drawing.Size(705, 705);
 			this.pbGrid.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
 			this.pbGrid.TabIndex = 2;
 			this.pbGrid.TabStop = false;

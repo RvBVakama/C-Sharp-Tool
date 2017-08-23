@@ -14,14 +14,12 @@ namespace C_Sharp_Tool
     {
 		public delegate void ButtonEvent(object sender, EventArgs e);
 
-		public Map_Size MapSize = new Map_Size();
-
 		public Main_Menu()
         {
             InitializeComponent();
         }
 
-		public void tetset(ButtonEvent dd)
+		public void btnNewSet(ButtonEvent dd)
 		{
 			btnNew.Click += new EventHandler(dd);
 		}
@@ -29,7 +27,7 @@ namespace C_Sharp_Tool
         private void btnNew_Click(object sender, EventArgs e)
         {
 			Hide();
-			MapSize.Show();
+			Global.MapSize.Show();
 		}
 
         private void btnLoad_Click(object sender, EventArgs e)
@@ -39,10 +37,10 @@ namespace C_Sharp_Tool
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-        }
+			Global.uExit();
+		}
 
-        private void lblTitle_Click(object sender, EventArgs e)
+		private void lblTitle_Click(object sender, EventArgs e)
         {
 
         }
