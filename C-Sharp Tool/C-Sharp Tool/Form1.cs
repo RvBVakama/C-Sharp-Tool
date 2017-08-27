@@ -17,6 +17,7 @@ namespace C_Sharp_Tool
 			InitializeComponent();
 
 			ucMainMenu.btnNewSet(ucMapCreation.btnNewGet);
+			formMapSize.btnNewSet(ucMapCreation.btnNewGet);
 		}
 				
         private void formMmaakpe_Load(object sender, EventArgs e)

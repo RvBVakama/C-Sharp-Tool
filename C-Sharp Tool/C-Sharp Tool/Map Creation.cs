@@ -44,7 +44,7 @@ namespace C_Sharp_Tool
 			int nNumOfCells = 0;
 			int nCellSize = 0;
 
-			nNumOfCells = 70;
+			nNumOfCells = formMapSize.tet;
 
 			nCellSize = nBoxSize / nNumOfCells; 
 			

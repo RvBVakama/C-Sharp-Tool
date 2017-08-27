@@ -3,7 +3,7 @@ namespace C_Sharp_Tool
 {
 	class Global
 	{
-		static public Map_Size MapSize = new Map_Size();
+		static public formMapSize MapSize = new formMapSize();
 
 		static public void uExit()
 		{
