@@ -15,7 +15,7 @@ namespace C_Sharp_Tool
 
 			else if (exitornot == DialogResult.No)
 			{
-				//nada
+				MessageBox.Show("Thank You");
 			}
 		}
 	}

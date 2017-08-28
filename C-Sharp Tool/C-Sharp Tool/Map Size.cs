@@ -12,7 +12,7 @@ namespace C_Sharp_Tool
 {
 	public partial class formMapSize : Form
 	{
-        public static int tet = 0;
+        public static int nMapGridSize = 15;
 
         public delegate void ButtonEvent(object sender, EventArgs e);
 
@@ -29,12 +29,11 @@ namespace C_Sharp_Tool
         private void btnSet_Click(object sender, EventArgs e)
 		{
 			Close();
-            Global.MapSize.Show();
         }
 
         private void nudMapSize_ValueChanged(object sender, EventArgs e)
         {
-           tet = Convert.ToInt32(Math.Round(nudMapSize.Value, 0));
-        }
-    }
+			//nMapGridSize = Convert.ToInt32(Math.Round(nudMapSize.Value, 0));
+		}
+	}
 }

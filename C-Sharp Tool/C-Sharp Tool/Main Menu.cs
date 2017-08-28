@@ -17,20 +17,20 @@ namespace C_Sharp_Tool
 		public Main_Menu()
         {
             InitializeComponent();
-        }
+		}
 
 		public void btnNewSet(ButtonEvent dd)
 		{
 			btnNew.Click += new EventHandler(dd);
 		}
-		
+
         private void btnNew_Click(object sender, EventArgs e)
         {
 			Hide();
 			Global.MapSize.Show();
 		}
 
-        private void btnLoad_Click(object sender, EventArgs e)
+		private void btnLoad_Click(object sender, EventArgs e)
         {
 
         }
