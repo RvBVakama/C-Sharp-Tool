@@ -12,22 +12,23 @@ namespace C_Sharp_Tool
 {
 	public partial class formMmaakpe : Form
 	{
+        // creating the map and setting up the initial items
 		EItemList[,] EIL = new EItemList[,]
-			{{EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR},
-			{EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR},
-			{EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR},
-			{EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR},
-			{EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR},
-			{EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR},
-			{EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR},
-			{EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR},
-			{EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR},
-			{EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR},
-			{EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR},
-			{EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR},
-			{EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR},
-			{EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR},
-			{EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR, EItemList.EFLOOR}};
+			{{EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR},
+			{EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR},
+			{EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR},
+			{EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR},
+			{EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR},
+			{EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR},
+			{EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR},
+			{EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR},
+			{EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR},
+			{EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR},
+			{EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR},
+			{EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR},
+			{EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR},
+			{EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR},
+			{EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR}};
 
 		public formMmaakpe()
 		{
@@ -82,11 +83,12 @@ namespace C_Sharp_Tool
 				g.DrawLine(p, x * nCellSize, 0, x * nCellSize, nNumOfCells * nCellSize);
 			}
 
-			// Create image.
-			//Image newImage = Image.FromFile("Move");
+            this.Cursor = new Cursor(Cursor.Current.Handle);
+            int posX = Cursor.Position.X;
+            int posY = Cursor.Position.Y;
 
-			// Create rectangle for displaying image.
-			Rectangle destRect = new Rectangle(0, 0, 46, 46);
+            //// Create rectangle for displaying image.
+            Rectangle destRect = new Rectangle((posX / 46), (posY / 46), 46, 46);
 
 			// Create rectangle for source image.
 			Rectangle srcRect = new Rectangle(0, 0, 64, 64);
@@ -103,5 +105,13 @@ namespace C_Sharp_Tool
 			e.Graphics.DrawImage(Properties.Resources.Spikes, destRect, srcRect, units);
 
 		}
-	}
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+
+            Invalidate();
+            Refresh();
+        }
+    }
 }
