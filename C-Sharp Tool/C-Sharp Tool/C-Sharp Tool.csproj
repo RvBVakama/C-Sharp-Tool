@@ -61,23 +61,11 @@
     <Compile Include="Main Menu.Designer.cs">
       <DependentUpon>Main Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Map Creation.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Map Creation.Designer.cs">
-      <DependentUpon>Map Creation.cs</DependentUpon>
-    </Compile>
     <Compile Include="Map Size.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Map Size.Designer.cs">
       <DependentUpon>Map Size.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Menu Bar.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Menu Bar.Designer.cs">
-      <DependentUpon>Menu Bar.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,14 +75,8 @@
     <EmbeddedResource Include="Main Menu.resx">
       <DependentUpon>Main Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Map Creation.resx">
-      <DependentUpon>Map Creation.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Map Size.resx">
       <DependentUpon>Map Size.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Menu Bar.resx">
-      <DependentUpon>Menu Bar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

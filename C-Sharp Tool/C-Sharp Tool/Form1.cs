@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Threading;
 namespace C_Sharp_Tool
 {
 	public partial class formMmaakpe : Form
 	{
-        // creating the map and setting up the initial items
+		// creating the map and setting up the initial items
 		EItemList[,] EIL = new EItemList[,]
 			{{EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR},
 			{EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR, EItemList.ENUM_FLOOR},
@@ -34,9 +35,12 @@ namespace C_Sharp_Tool
 		{
 			InitializeComponent();
 			Global.MapSize.btnNewSet(btnSet_Click);
+			Items.InitializeItemList();
+
 		}
+
 		private void formMmaakpe_Load(object sender, EventArgs e)
-        {
+		{
 		}
 
 		private void btnSet_Click(object sender, EventArgs e)
@@ -51,11 +55,6 @@ namespace C_Sharp_Tool
 		}
 		private void Map_Creation_Load(object sender, EventArgs e)
 		{
-			
-			pbItem1.BackgroundImage = Properties.Resources.Spikes;
-			pbItem2.BackgroundImage = Properties.Resources.Wall;
-			pbItem3.BackgroundImage = Properties.Resources.Floor;
-			pbItem4.BackgroundImage = Properties.Resources.Move_AB;
 		}
 
 		private void pbGridPaint(object sender, PaintEventArgs e)
@@ -71,6 +70,23 @@ namespace C_Sharp_Tool
 
 			nCellSize = nBoxSize / nNumOfCells;
 
+			// Draw images to screen.
+			for (int i = 0; i < EIL.GetLength(0); ++i)
+			{
+				for (int j = 0; j < EIL.GetLength(1); ++j)
+				{
+					Rectangle destRect = new Rectangle((46 * i), (46 * j), 46, 46);
+
+					// Create rectangle for source image.
+					Rectangle srcRect = new Rectangle(0, 0, 64, 64);
+
+					GraphicsUnit units = GraphicsUnit.Pixel;
+
+					//e.Graphics.DrawImage(Items.dictItemList[EIL[i,j]], (46 * i), (46 * j), 46, 46);
+					e.Graphics.DrawImage(Items.dictItemList[EIL[i, j]], destRect, srcRect, units);
+				}
+			}
+
 			Pen p = new Pen(Color.LightGray);
 
 			for (int y = 0; y < nNumOfCells; ++y)
@@ -82,36 +98,103 @@ namespace C_Sharp_Tool
 			{
 				g.DrawLine(p, x * nCellSize, 0, x * nCellSize, nNumOfCells * nCellSize);
 			}
+		}
 
-            this.Cursor = new Cursor(Cursor.Current.Handle);
-            int posX = Cursor.Position.X;
-            int posY = Cursor.Position.Y;
+		private void pictureBox1_Click(object sender, EventArgs e)
+		{
+			Point point = pictureBox1.PointToClient(Cursor.Position);
 
-            //// Create rectangle for displaying image.
-            Rectangle destRect = new Rectangle((posX / 46), (posY / 46), 46, 46);
+			int posX = point.X;
+			int posY = point.Y;
 
-			// Create rectangle for source image.
-			Rectangle srcRect = new Rectangle(0, 0, 64, 64);
-			GraphicsUnit units = GraphicsUnit.Pixel;
+			posX = posX / 46;
+			posY = posY / 46;
 
-			// Draw image to screen.
-			//for (int i = 0; i < EIL.GetLength(0); ++i)
-			//{
-			//	for (int j = 0; j < EIL.GetLength(1); ++j)
-			//	{
+			EIL[posX, posY] = Items.currentItem;
 
-			//	}
-			//}
-			e.Graphics.DrawImage(Properties.Resources.Spikes, destRect, srcRect, units);
+			Invalidate();
+			Refresh();
+		}
+
+		private void pbItem1_Click(object sender, EventArgs e)
+		{
+			Items.currentItem = EItemList.ENUM_SPIKES;
+		}
+
+		private void pbItem2_Click(object sender, EventArgs e)
+		{
+			Items.currentItem = EItemList.ENUM_MOVEAB;
+		}
+
+		private void pictureBox39_Click(object sender, EventArgs e)
+		{
+			Items.currentItem = EItemList.ENUM_FLOOR;
+		}
+
+		private void pictureBox55_Click(object sender, EventArgs e)
+		{
+			Items.currentItem = EItemList.ENUM_WALL;
+		}
+
+		private void newToolStripMenuItem_Click(object sender, EventArgs e)
+		{
 
 		}
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            
+		private void openToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog open = new OpenFileDialog();
 
-            Invalidate();
-            Refresh();
-        }
-    }
+			if (open.ShowDialog() == DialogResult.OK)
+			{
+				//read in file location
+				string text = System.IO.File.ReadAllText(open.FileName);
+				string[] values = text.Split(',');
+				int index = 0;
+
+				for (int i = 0; i < EIL.GetLength(1); ++i)
+				{
+					for (int j = 0; j < EIL.GetLength(0); ++j)
+					{
+						EIL[j,i] = (EItemList)Enum.Parse(typeof(EItemList), values[index]);
+						index++;
+						Thread.Sleep(1);
+						Invalidate();
+						Refresh();
+					}
+				}
+			}
+		}
+
+		private void saveToolStripMenuItem_Click_1(object sender, EventArgs e)
+		{
+			SaveFileDialog save = new SaveFileDialog();
+			save.InitialDirectory = @"C:\Users\s171761\Desktop\New folder";
+			save.Filter = "Text Files|*.txt";
+			save.DefaultExt = "txt";
+
+			if (save.ShowDialog() == DialogResult.OK)
+			{
+				//save a text file
+				string text = "";
+
+				for (int i = 0; i < EIL.GetLength(1); ++i)
+				{
+					for (int j = 0; j < EIL.GetLength(0); ++j)
+					{
+						text += EIL[j, i].ToString();
+						text += ",";
+					}
+				}
+				File.WriteAllText(save.FileName, text);
+			}
+		}
+
+
+		private void exitToolStripMenuItem_Click_1(object sender, EventArgs e)
+		{
+			Global.uExit();
+		}
+
+	}
 }
